@@ -8,17 +8,18 @@ namespace Problems
         {
             Console.WriteLine("Enter input: ");
             var ans = Console.ReadLine();
-            Prefix(ans);
+            Console.WriteLine(Prefix(ans));
+            Console.ReadKey();
 
         }
-        static void Prefix(string Str)
+        public static string Prefix(string Str)
         {
             var count = Str.Length;
             char[] spaces = new char[] {' ', '\r', '\n' };
             var wordCount = Str.Split(spaces,StringSplitOptions.RemoveEmptyEntries).Length; 
             
-            Console.WriteLine(count + "," + wordCount + ":" + Str);
-            Console.ReadKey();
+            return count + "," + wordCount + ":" + Str;
+            
 
         }
     }
