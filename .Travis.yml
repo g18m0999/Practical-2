@@ -1,0 +1,12 @@
+language: csharp
+dotnet: 3.1.100
+scrip:dotnet test 
+
+matrix:
+    include:
+        -os: linux
+        -dist: bionic
+        -os: linux
+        -dist: xenial
+        -os: osx
+        
